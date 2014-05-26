@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/javascripts/index.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    
+    <div>
+    	<h2>Add new pokemon</h2>
+
+    	name:   <input type="text" name="name"><br>
+		abilitiy: <input type="text" name="abilitiy"><br>
+		height: <input type="text" name="height"><br>
+		weight: <input type="text" name="weight"><br>
+		<button type="button" name="save">Save!</button>
+    </div>
+    <div>
+    	<h2>find monster</h2>
+    	
+    	name:   <input type="text" name="findName"><br>
+		<button type="button" name="find">Find!</button>
+		<table style="width:300px" name="findTable">
+			<thead>	
+				<tr>
+					<th>Name</th>
+					<th>Ability</th>		
+					<th>Height</th>
+					<th>Weight</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+    </div>
+  </body>
+</html>
