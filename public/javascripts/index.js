@@ -2,7 +2,7 @@
 $(function(){
 	$("button[name='save']").on('click',onSaveClick);
 	$("button[name='find']").on('click',onFindClick);
-
+	current_Url = window.location;
 })
 function onSaveClick(){
 	var name = $("input[name='name']").val();
@@ -30,7 +30,7 @@ function ajax_save(monsterArray){
 	var monsterJson = JSON.stringify(monsterArray);
 	//console.log(monsterJson);
 	$.ajax({
-		url: 'http://localhost:3000/save',
+		url: current_Url+'save',
 		type: 'POST',
 		contentType: 'application/json; charset=UTF-8',
 		data: monsterJson,
@@ -46,7 +46,7 @@ function ajax_save(monsterArray){
 
 function ajax_find(monsterName){
 	$.ajax({
-		url: 'http://localhost:3000/find',
+		url: current_Url+'find',
 		type: 'GET',
 		data:{
 			monsterName:monsterName
