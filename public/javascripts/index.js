@@ -45,6 +45,7 @@ function ajax_save(monsterArray){
 }
 
 function ajax_find(monsterName){
+	console.log(current_Url+'find');
 	$.ajax({
 		url: current_Url+'find',
 		type: 'GET',
